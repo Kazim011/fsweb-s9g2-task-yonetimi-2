@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
 import { toast } from 'react-toastify';
 
+
 export default function TaskHookForm({ kisiler, submitFn }) {
   const {
     register,
@@ -10,7 +11,7 @@ export default function TaskHookForm({ kisiler, submitFn }) {
     reset,
     formState: { errors, isValid },
   } = useForm({ mode: "onChange" });
-
+  
   function mySubmit(data) {
     submitFn({
       ...data,
